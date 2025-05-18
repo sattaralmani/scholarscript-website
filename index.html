@@ -628,9 +628,15 @@
       </div>
       
       <!-- Order Form -->
-      <form class="hero-form" id="quick-order">
+      <form class="hero-form" 
+      id="quick-order" 
+      name="order-form" 
+      method="POST" 
+      netlify
+      enctype="multipart/form-data"
+      data-netlify-recaptcha="true">
         <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
-        
+        <input type="hidden" name="form-name" value="order-form">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" required>
