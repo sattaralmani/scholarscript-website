@@ -629,18 +629,22 @@
       
       <!-- Order Form -->
      <!-- MAIN FORM (Netlify-enabled) -->
+<!-- MAIN ORDER FORM -->
 <form class="hero-form" 
       id="quick-order" 
       name="order-form" 
       method="POST" 
       netlify
-      enctype="multipart/form-data">
+      enctype="multipart/form-data"
+      data-netlify="true">
 
   <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
   
-    <input type="hidden" name="form-name" value="order-form">
+  <!-- REQUIRED Netlify Hidden Field -->
+  <input type="hidden" name="form-name" value="order-form">
 
-    <div class="form-group">
+  <!-- Form Fields - ALL inputs MUST have name attributes -->
+  <div class="form-group">
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
   </div>
