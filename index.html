@@ -696,17 +696,54 @@
       </div>
       
       <!-- Order Form -->
- 
-<form name="order-form-test" netlify style="padding: 20px; border: 2px dashed red;">
-  <h3>NETLIFY TEST FORM v2</h3>
-  <input type="text" name="test_field" placeholder="Type anything" required>
-  <button type="submit">Submit Test</button>
+ <!-- ▼ 100% WORKING TEST FORM ▼ -->
+<form name="simple-test" netlify style="padding: 20px; border: 2px solid green;">
+  <h3>TEST FORM (Should Work)</h3>
+  <input type="text" name="test_input" required placeholder="Type anything">
+  <input type="submit" value="Submit Now" 
+         style="background: blue; color: white; padding: 10px; margin-top: 10px;">
 </form>
+ <!-- ▼ PASTE THIS TEST ▼ -->
+<form name="thesiscraft-main-order" 
+      netlify
+      enctype="multipart/form-data"
+      style="padding: 20px; background: #f9f9f9; max-width: 500px;">
 
-   </div>
-</section>
-<!-- ▲ END MAIN FORM ▲ -->
-    </div>
+  <!-- Required Fields -->
+  <input type="text" 
+         name="client_name" 
+         required 
+         placeholder="Full Name *"
+         style="width: 100%; padding: 8px; margin: 5px 0;">
+
+  <input type="text" 
+         name="client_email" 
+         required
+         placeholder="Email *"
+         pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+         style="width: 100%; padding: 8px; margin: 5px 0;">
+
+  <!-- Optional Fields -->
+  <select name="service_type" style="width: 100%; padding: 8px; margin: 5px 0;">
+    <option value="">Select Service (Optional)</option>
+    <option value="thesis">Thesis Help</option>
+    <option value="research">Research Paper</option>
+  </select>
+
+  <input type="date" 
+         name="deadline" 
+         style="width: 100%; padding: 8px; margin: 5px 0;">
+
+  <input type="file" 
+         name="document_upload"
+         accept=".pdf,.doc,.docx"
+         style="margin: 10px 0;">
+
+  <input type="submit" 
+         value="Submit Request" 
+         style="background: #3498db; color: white; padding: 10px; border: none; width: 100%;">
+</form>
+  </div>
   </section>
 
   <!-- Services Section -->
@@ -1023,5 +1060,11 @@ document.querySelector('form[name="order-form"]').addEventListener('submit', fun
     </button>
   </form>
 </div>
+<script>
+  document.querySelector('form[name="order-form"]').addEventListener('submit', function(e) {
+    console.log("Form submitted!");
+    // Let it submit normally (Netlify will handle)
+  });
+</script>
 </body>
 </html>
