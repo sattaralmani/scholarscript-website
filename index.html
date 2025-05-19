@@ -696,39 +696,32 @@
       </div>
       
       <!-- Order Form -->
-    <!-- ▼ PASTE THIS REPLACEMENT FORM ▼ -->
-<section class="order-section">
-  <div class="container">
-    <form class="order-form" 
-          name="order-form"
-          method="POST"
+    <!-- ▼ MAIN FORM - REPLACE YOUR EXISTING FORM ▼ -->
+<section class="order-section" style="padding: 40px 0;">
+  <div class="container" style="width: 90%; max-width: 600px; margin: 0 auto;">
+    <form name="order-form" 
+          method="POST" 
           netlify
-          data-netlify="true"
-          netlify-honeypot="bot-field">
-
-      <!-- Hidden Netlify Fields -->
-      <input type="hidden" name="form-name" value="order-form">
-      <p class="hidden">
-        <label>Don't fill this out: <input name="bot-field"></label>
-      </p>
+          enctype="multipart/form-data"
+          style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
 
       <h3 style="color: #3498db; text-align: center; margin-bottom: 20px;">Request Academic Assistance</h3>
 
       <!-- Required Fields -->
-      <div class="form-group">
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required>
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Full Name *</label>
+        <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
       </div>
 
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Email *</label>
+        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
       </div>
 
       <!-- Optional Fields -->
-      <div class="form-group">
-        <label for="service">Service Type</label>
-        <select id="service" name="service">
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Service Type</label>
+        <select name="service" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
           <option value="">Select Service (Optional)</option>
           <option value="Thesis">Thesis/Dissertation</option>
           <option value="Research">Research Paper</option>
@@ -736,41 +729,29 @@
         </select>
       </div>
 
-      <div class="form-group">
-        <label for="deadline">Deadline (Optional)</label>
-        <input type="date" id="deadline" name="deadline">
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Deadline (Optional)</label>
+        <input type="date" name="deadline" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
       </div>
 
-      <div class="form-group">
-        <label for="details">Additional Details (Optional)</label>
-        <textarea id="details" name="details"></textarea>
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional Details (Optional)</label>
+        <textarea name="details" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 100px;"></textarea>
       </div>
 
-      <div class="form-group">
-        <label for="document">Upload File (Optional)</label>
-        <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
-        <p class="hint">PDF or Word documents only (Max 10MB)</p>
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload File (Optional)</label>
+        <input type="file" name="document" accept=".pdf,.doc,.docx" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+        <p style="font-size: 0.8em; color: #777; margin-top: 5px;">PDF or Word documents only (Max 10MB)</p>
       </div>
 
-      <button type="submit" class="submit-btn">Submit Request</button>
+      <button type="submit" style="background: #3498db; color: white; padding: 12px 0; border: none; border-radius: 30px; cursor: pointer; font-size: 16px; font-weight: 600; width: 100%; transition: all 0.3s;">
+        Submit Request
+      </button>
     </form>
   </div>
 </section>
-<!-- ▲ END REPLACEMENT FORM ▲ -->
-
-  <!-- ▼ ADD THIS BLOCK ▼ -->
-  <div style="margin: 15px 0;">
-    <label><strong>Upload File (PDF/DOC):</strong></label>
-    <input 
-      type="file" 
-      name="document" 
-      accept=".pdf,.doc,.docx" 
-      style="display: block; margin-top: 5px;"
-      required
-    >
-  </div>
-            <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
-      </form>
+<!-- ▲ END MAIN FORM ▲ -->
     </div>
   </section>
 
