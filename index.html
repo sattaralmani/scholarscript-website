@@ -696,60 +696,14 @@
       </div>
       
       <!-- Order Form -->
-    <!-- ▼ MAIN FORM - REPLACE YOUR EXISTING FORM ▼ -->
-<section class="order-section" style="padding: 40px 0;">
-  <div class="container" style="width: 90%; max-width: 600px; margin: 0 auto;">
-    <form name="order-form" 
-          method="POST" 
-          netlify
-          enctype="multipart/form-data"
-          style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+ 
+<form name="order-form-test" netlify style="padding: 20px; border: 2px dashed red;">
+  <h3>NETLIFY TEST FORM v2</h3>
+  <input type="text" name="test_field" placeholder="Type anything" required>
+  <button type="submit">Submit Test</button>
+</form>
 
-      <h3 style="color: #3498db; text-align: center; margin-bottom: 20px;">Request Academic Assistance</h3>
-
-      <!-- Required Fields -->
-      <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Full Name *</label>
-        <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-      </div>
-
-      <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Email *</label>
-        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-      </div>
-
-      <!-- Optional Fields -->
-      <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Service Type</label>
-        <select name="service" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-          <option value="">Select Service (Optional)</option>
-          <option value="Thesis">Thesis/Dissertation</option>
-          <option value="Research">Research Paper</option>
-          <option value="Editing">Editing Service</option>
-        </select>
-      </div>
-
-      <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Deadline (Optional)</label>
-        <input type="date" name="deadline" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-      </div>
-
-      <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional Details (Optional)</label>
-        <textarea name="details" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 100px;"></textarea>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload File (Optional)</label>
-        <input type="file" name="document" accept=".pdf,.doc,.docx" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-        <p style="font-size: 0.8em; color: #777; margin-top: 5px;">PDF or Word documents only (Max 10MB)</p>
-      </div>
-
-      <button type="submit" style="background: #3498db; color: white; padding: 12px 0; border: none; border-radius: 30px; cursor: pointer; font-size: 16px; font-weight: 600; width: 100%; transition: all 0.3s;">
-        Submit Request
-      </button>
-    </form>
-  </div>
+   </div>
 </section>
 <!-- ▲ END MAIN FORM ▲ -->
     </div>
