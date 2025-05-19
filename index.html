@@ -571,7 +571,75 @@
         width: 100%;
       }
     }
-  </style>
+  /* ▼ FORM STYLES ▼ */
+.order-section {
+  padding: 40px 0;
+}
+
+.order-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+.hidden { 
+  display: none; 
+}
+
+.hint {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  background: #3498db;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+/* ▲ END FORM STYLES ▲ */
+</style>
 </head>
 <head>
   <!-- Other head elements (title, meta tags, etc.) -->
@@ -628,72 +696,68 @@
       </div>
       
       <!-- Order Form -->
-     <!-- MAIN FORM (Netlify-enabled) -->
-<!-- MAIN ORDER FORM -->
-<form class="hero-form" 
-      id="quick-order" 
-      name="order-form" 
-      method="POST" 
-      netlify
-      netlify-honeypot="bot-field"
-      enctype="multipart/form-data"
-      data-netlify="true">
+    <!-- ▼ PASTE THIS REPLACEMENT FORM ▼ -->
+<section class="order-section">
+  <div class="container">
+    <form class="order-form" 
+          name="order-form"
+          method="POST"
+          netlify
+          data-netlify="true"
+          netlify-honeypot="bot-field">
 
-  <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
-  
-    <input type="hidden" name="form-name" value="order-form">
-    <div hidden><input name="bot-field"></div>
-    <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="service">Service Type</label>
-    <select id="service" name="service" required>
-      <option value="">Select Service</option>
-      <option value="Academic Writing">Academic Writing</option>
-      <option value="Research Proposal">Research Proposal</option>
-      <option value="Thesis/Dissertation">Thesis/Dissertation</option>
-      <option value="Editing">Editing</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label for="deadline">Deadline</label>
-    <input type="date" id="deadline" name="deadline" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="details">Assignment Details</label>
-    <textarea id="details" name="details" required></textarea>
-  </div>
-  
-  <div class="form-group">
-    <label for="document"><strong>Upload File (PDF/DOC):</strong></label>
-    <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" required>
-  </div>
+      <!-- Hidden Netlify Fields -->
+      <input type="hidden" name="form-name" value="order-form">
+      <p class="hidden">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
 
-  <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
-</form>
+      <h3 style="color: #3498db; text-align: center; margin-bottom: 20px;">Request Academic Assistance</h3>
 
-<div style="background: #f5f5f5; padding: 20px; margin-top: 40px; border-radius: 8px;">
-  <h3 style="text-align: center; color: var(--primary);">Netlify Test Form</h3>
-  <form name="test-form" netlify>
-    <div class="form-group">
-      <label>Test Field</label>
-      <input type="text" name="test-field" required>
-    </div>
-    <button type="submit" class="btn" style="width: 100%;">Submit Test</button>
-  </form>
-</div> 
-  
+      <!-- Required Fields -->
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- Optional Fields -->
+      <div class="form-group">
+        <label for="service">Service Type</label>
+        <select id="service" name="service">
+          <option value="">Select Service (Optional)</option>
+          <option value="Thesis">Thesis/Dissertation</option>
+          <option value="Research">Research Paper</option>
+          <option value="Editing">Editing Service</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="deadline">Deadline (Optional)</label>
+        <input type="date" id="deadline" name="deadline">
+      </div>
+
+      <div class="form-group">
+        <label for="details">Additional Details (Optional)</label>
+        <textarea id="details" name="details"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="document">Upload File (Optional)</label>
+        <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+        <p class="hint">PDF or Word documents only (Max 10MB)</p>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+  </div>
+</section>
+<!-- ▲ END REPLACEMENT FORM ▲ -->
+
   <!-- ▼ ADD THIS BLOCK ▼ -->
   <div style="margin: 15px 0;">
     <label><strong>Upload File (PDF/DOC):</strong></label>
@@ -705,9 +769,7 @@
       required
     >
   </div>
-  <!-- ▲ ABOVE SUBMIT BUTTON ▲ -->
-
-          <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
+            <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
       </form>
     </div>
   </section>
@@ -1013,6 +1075,18 @@ document.querySelector('form[name="order-form"]').addEventListener('submit', fun
   alert("DEBUG: Form would submit!\nCheck browser console (F12) for details");
 });
 </script>
-
+<!-- ▼ TEST FORM - ADD AT BOTTOM OF PAGE ▼ -->
+<div style="background: #f0f8ff; padding: 20px; margin-top: 50px; border: 1px dashed #3498db;">
+  <h3 style="text-align: center; color: #3498db;">Netlify Debug Form</h3>
+  <form name="debug-form" netlify>
+    <div style="margin-bottom: 15px;">
+      <label>Test Field *</label>
+      <input type="text" name="debug-field" required style="width: 100%; padding: 8px;">
+    </div>
+    <button type="submit" style="background: #3498db; color: white; padding: 10px; border: none; width: 100%;">
+      Submit Test
+    </button>
+  </form>
+</div>
 </body>
 </html>
