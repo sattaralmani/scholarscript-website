@@ -628,48 +628,68 @@
       </div>
       
       <!-- Order Form -->
-      <form class="hero-form" 
+     <!-- MAIN FORM (Netlify-enabled) -->
+<form class="hero-form" 
       id="quick-order" 
       name="order-form" 
       method="POST" 
       netlify
-      enctype="multipart/form-data"
-      data-netlify-recaptcha="true">
-        <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
-        <input type="hidden" name="form-name" value="order-form">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="service">Service Type</label>
-          <select id="service" required>
-            <option value="">Select Service</option>
-            <option value="Academic Writing">Academic Writing</option>
-            <option value="Research Proposal">Research Proposal</option>
-            <option value="Thesis/Dissertation">Thesis/Dissertation</option>
-            <option value="Editing">Editing</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="deadline">Deadline</label>
-          <input type="date" id="deadline" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="details">Assignment Details</label>
-          <textarea id="details" required></textarea>
-        </div>
-        <form enctype="multipart/form-data"> <!-- Add enctype if missing -->
-  <!-- Existing fields -->
+      enctype="multipart/form-data">
+
+  <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
+  
+    <input type="hidden" name="form-name" value="order-form">
+
+    <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="service">Service Type</label>
+    <select id="service" name="service" required>
+      <option value="">Select Service</option>
+      <option value="Academic Writing">Academic Writing</option>
+      <option value="Research Proposal">Research Proposal</option>
+      <option value="Thesis/Dissertation">Thesis/Dissertation</option>
+      <option value="Editing">Editing</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="deadline">Deadline</label>
+    <input type="date" id="deadline" name="deadline" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="details">Assignment Details</label>
+    <textarea id="details" name="details" required></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label for="document"><strong>Upload File (PDF/DOC):</strong></label>
+    <input type="file" id="document" name="document" accept=".pdf,.doc,.docx" required>
+  </div>
+
+  <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
+</form>
+
+<div style="background: #f5f5f5; padding: 20px; margin-top: 40px; border-radius: 8px;">
+  <h3 style="text-align: center; color: var(--primary);">Netlify Test Form</h3>
+  <form name="test-form" netlify>
+    <div class="form-group">
+      <label>Test Field</label>
+      <input type="text" name="test-field" required>
+    </div>
+    <button type="submit" class="btn" style="width: 100%;">Submit Test</button>
+  </form>
+</div> 
   
   <!-- ▼ ADD THIS BLOCK ▼ -->
   <div style="margin: 15px 0;">
