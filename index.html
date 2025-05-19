@@ -635,16 +635,15 @@
       name="order-form" 
       method="POST" 
       netlify
+      netlify-honeypot="bot-field"
       enctype="multipart/form-data"
       data-netlify="true">
 
   <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Place Your Order</h3>
   
-  <!-- REQUIRED Netlify Hidden Field -->
-  <input type="hidden" name="form-name" value="order-form">
-
-  <!-- Form Fields - ALL inputs MUST have name attributes -->
-  <div class="form-group">
+    <input type="hidden" name="form-name" value="order-form">
+    <div hidden><input name="bot-field"></div>
+    <div class="form-group">
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required>
   </div>
@@ -988,5 +987,32 @@
       this.reset();
     });
   </script>
+<!-- ▼ ADD THIS DEBUG SCRIPT BEFORE CLOSING BODY ▼ -->
+<script>
+// Debug form submissions locally
+document.querySelector('form[name="order-form"]').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Log all form data
+  const formData = new FormData(this);
+  for (let [key, value] of formData.entries()) {
+    console.log(`${key}: ${value}`);
+  }
+  
+  // Preview file info
+  const fileInput = document.querySelector('input[type="file"]');
+  if (fileInput.files[0]) {
+    console.log(
+      "File:",
+      fileInput.files[0].name, 
+      "Size:",
+      Math.round(fileInput.files[0].size / 1024) + "KB"
+    );
+  }
+  
+  alert("DEBUG: Form would submit!\nCheck browser console (F12) for details");
+});
+</script>
+
 </body>
 </html>
