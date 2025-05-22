@@ -6,10 +6,5 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Add more pages like this:
-  <url>
-    <loc>https://thesiscraft.netlify.app/about</loc>
-    <lastmod>2025-05-27</lastmod>
-  </url>
-  -->
+  <!-- Add more pages below -->
 </urlset>
