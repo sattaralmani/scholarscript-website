@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    .hidden { display: none; } /* Hides honeypot field */
+    form { max-width: 500px; margin: 20px auto; }
+    label, input, textarea, button { display: block; width: 100%; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <!-- Netlify Form -->
+  <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+    <!-- Honeypot (anti-spam) -->
+    <div class="hidden">
+      <label>Leave this empty: <input name="bot-field"></label>
+    </div>
+
+    <!-- User Fields -->
+    <label>Your Name: <input type="text" name="name" required></label>
+    <label>Your Email: <input type="email" name="email" required></label>
+    <label>Message: <textarea name="message" required></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
