@@ -1,4 +1,26 @@
+[build]
+  command = "echo 'No build required'"
+  publish = "."
 
+# Form submission settings
+[context.production.environment]
+  NETLIFY_IMAGES_CDN_DOMAIN = "thesiscraft.netlify.app"
+
+# Redirect rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers for forms
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors 'none'"
+
+# Special file headers
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
@@ -9,3 +31,10 @@
   for = "/robots.txt"
   [headers.values]
     Content-Type = "text/plain"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/humans.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+    Cache-Control = "no-cache"
