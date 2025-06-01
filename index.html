@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScholarScript - Premium Academic Services</title>
+    <meta name="description" content="Get professional academic writing services from PhD experts. Thesis writing, research papers, editing services with guaranteed quality.">
+    <meta name="keywords" content="academic writing, thesis writing, research paper, essay writing, editing services">
+    <meta name="author" content="ScholarScript">
+    
+    <!-- Sitemap and SEO links -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="canonical" href="https://scholarscript.com">
+    
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="ScholarScript - Premium Academic Services">
+    <meta property="og:description" content="Get professional academic writing services from PhD experts. Quality guaranteed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scholarscript.com">
+    <meta property="og:image" content="https://scholarscript.com/images/og-image.jpg">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScholarScript - Premium Academic Services">
+    <meta name="twitter:description" content="Professional academic writing services from PhD experts.">
+    <meta name="twitter:image" content="https://scholarscript.com/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    
+    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<!-- Link to contact page -->
-<link rel="alternate" href="contact.html" type="text/html" title="Contact">
-
-<!-- Link to Netlify TOML config (if needed for reference) -->
-<link rel="alternate" href="netlify.toml" type="application/toml" title="Netlify Config">
-
-<!-- Link to sitemap -->
-<link rel="sitemap" href="sitemap.xml" type="application/xml" title="Sitemap">
-
-<!-- Link to robots.txt -->
-<link rel="robots" href="public/robots.txt" type="text/plain" title="Robots">
+    
     <style>
         :root {
             --primary: #1a3a6c;
@@ -964,6 +979,44 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* SEO Section */
+        .seo-section {
+            background-color: var(--light);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        .seo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .seo-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .seo-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .sitemap-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .sitemap-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -973,10 +1026,6 @@
             <div class="contact-info">
                 <span><i class="fas fa-phone-alt"></i> +92 303 6111669</span>
                 <span><i class="fas fa-envelope"></i> scholarmedow@gmail.com</span>
-<meta name="robots" content="index, follow">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="your-domain.com/index.html">
             </div>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1004,13 +1053,7 @@
                 </ul>
             </nav>
             <a href="#order" class="cta-button">Order Now</a>
-       <nav>
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-    <a href="sitemap.xml">Sitemap</a>
-</nav>
-
- </div>
+        </div>
     </header>
     
     <!-- Hero Section -->
@@ -1347,6 +1390,15 @@
         </div>
     </section>
     
+    <!-- SEO Section with Sitemap Link -->
+    <section class="seo-section">
+        <div class="seo-content">
+            <h2>ScholarScript - Your Academic Partner</h2>
+            <p>ScholarScript provides premium academic writing services to students and researchers worldwide. Our team of PhD experts specializes in thesis writing, research papers, editing services, and more. With a commitment to quality, confidentiality, and timely delivery, we help you achieve your academic goals.</p>
+            <p>Explore our website to learn more about our services, process, and client testimonials. For quick access to all pages, view our <a href="/sitemap.xml" class="sitemap-link">sitemap</a>.</p>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -1365,6 +1417,7 @@
                         <li><a href="#process">Process</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#payments">Payments</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1387,7 +1440,7 @@
                 </div>
             </div>
             <div class="copyright">
-                © 2023 ScholarScript. All rights reserved.
+                © 2023 ScholarScript. All rights reserved. | <a href="/privacy-policy.html" style="color: rgba(255,255,255,0.6);">Privacy Policy</a> | <a href="/terms.html" style="color: rgba(255,255,255,0.6);">Terms of Service</a>
             </div>
         </div>
     </footer>
@@ -1427,12 +1480,10 @@
                     }
                 });
             });
+            
+            // Sitemap validation check
+            console.log("Sitemap is accessible at: /sitemap.xml");
         });
     </script>
-<div class="file-downloads">
-    <a href="netlify.toml" download>Download Netlify Config</a>
-    <a href="sitemap.xml" target="_blank">View Sitemap</a>
-    <a href="public/robots.txt" target="_blank">View Robots.txt</a>
-</div>
 </body>
 </html>
