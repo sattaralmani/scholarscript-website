@@ -1,0 +1,44 @@
+[build]
+  publish = "public"
+
+# Explicit redirects for static files
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt" 
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy.html"
+  status = 200
+  force = true
+
+# Catch-all for SPA routing (keep this last)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    Cache-Control = "public, max-age=3600"
+
+# Sitemap
+Sitemap: https://thesiscraft.netlify.app/sitemap.xml
+
+Sitemap: https://thesiscraft.netlify.app/sitemap.xml
