@@ -1,37 +1,39 @@
 [build]
   publish = "public"
 
-# Allow sitemap.xml and robots.txt to be served correctly
+# Explicit redirects for static files
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/robots.txt"
-  to = "/robots.txt"
+  to = "/robots.txt" 
   status = 200
+  force = true
 
 [[redirects]]
-  from = "/terms"
+  from = "/terms.html"
   to = "/terms.html"
   status = 200
+  force = true
 
 [[redirects]]
-  from = "/privacy-policy" 
+  from = "/privacy-policy.html"
   to = "/privacy-policy.html"
   status = 200
+  force = true
 
-# This catch-all should come LAST
+# Catch-all for SPA routing (keep this last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
 
-# Add correct content type for sitemap.xml
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml"
-    Cache-Control = "no-cache"
+    Cache-Control = "public, max-age=3600"
