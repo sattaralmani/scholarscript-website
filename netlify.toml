@@ -1,46 +1,27 @@
 [build]
-  command = "echo 'No build required'"
-  publish = "."
+  publish = "public"
 
-# Form submission settings
-[context.production.environment]
-  NETLIFY_IMAGES_CDN_DOMAIN = "thesiscraft.netlify.app"
+# Allow sitemap.xml and robots.txt to be served correctly
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
 
-# Redirect rules
 [[redirects]]
   from = "/robots.txt"
   to = "/robots.txt"
   status = 200
 
+# This catch-all should come LAST
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
-
-# Security headers for forms
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "frame-ancestors 'none'"
-
-# Special file headers
+# Add correct content type for sitemap.xml
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml"
-    Cache-Control = "no-cache"
-
-[[headers]]
-  for = "/robots.txt"
-  [headers.values]
-    Content-Type = "text/plain"
-    Cache-Control = "no-cache"
-
-[[headers]]
-  for = "/humans.txt"
-  [headers.values]
-    Content-Type = "text/plain"
     Cache-Control = "no-cache"
