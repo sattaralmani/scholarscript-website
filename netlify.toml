@@ -12,6 +12,16 @@
   to = "/robots.txt"
   status = 200
 
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy" 
+  to = "/privacy-policy.html"
+  status = 200
+
 # This catch-all should come LAST
 [[redirects]]
   from = "/*"
