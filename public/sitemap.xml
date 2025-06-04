@@ -5,17 +5,17 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://thesiscraft.netlify.app</loc>
-        <lastmod>2025-06-03T21:40:48+00:00</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://thesiscraft.netlify.app/privacy-policy.html</loc>
-        <lastmod>2025-06-03T21:40:48+00:00</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://thesiscraft.netlify.app/terms.html</loc>
-        <lastmod>2025-06-03T21:40:48+00:00</lastmod>
+        <lastmod>2025-06-05</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
