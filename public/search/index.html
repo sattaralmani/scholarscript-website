@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results - ScholarScript</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main class="search-results">
+        <h1>Search Results</h1>
+        <div id="search-results-container">
+            <p>Results for: <span id="search-query"></span></p>
+            <div id="search-results"></div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q') || '';
+            document.getElementById('search-query').textContent = query;
+            
+            // Add your actual search functionality here
+            console.log(`Search executed for: ${query}`);
+        });
+    </script>
+</body>
+</html>
