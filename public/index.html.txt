@@ -4,68 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScholarScript - Premium Academic Services</title>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["WebSite","Organization"],
-  "name": "ScholarScript",
-  "url": "https://scholarscript.com",
-  "sameAs": [
-    "https://twitter.com/scholarscript",
-    "https://facebook.com/scholarscript"
-  ],
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://scholarscript.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["WebSite","Organization"],
-  "name": "ScholarScript",
-  "url": "https://scholarscript.com",
-  "sameAs": [
-    "https://twitter.com/scholarscript",
-    "https://facebook.com/scholarscript"
-  ],
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://scholarscript.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-    <meta name="description" content="Get professional academic writing services from PhD experts. Thesis writing, research papers, editing services with guaranteed quality.">
-    <meta name="keywords" content="academic writing, thesis writing, research paper, essay writing, editing services">
-    <meta name="author" content="ScholarScript">
-    
-    <!-- Sitemap and SEO links -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <link rel="canonical" href="https://scholarscript.com">
-    
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="ScholarScript - Premium Academic Services">
-    <meta property="og:description" content="Get professional academic writing services from PhD experts. Quality guaranteed.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scholarscript.com">
-    <meta property="og:image" content="https://scholarscript.com/images/og-image.jpg">
-    
-    <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ScholarScript - Premium Academic Services">
-    <meta name="twitter:description" content="Professional academic writing services from PhD experts.">
-    <meta name="twitter:image" content="https://scholarscript.com/images/twitter-card.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
-    
-    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+<!-- Link to contact page -->
+<link rel="alternate" href="contact.html" type="text/html" title="Contact">
+
+<!-- Link to Netlify TOML config (if needed for reference) -->
+<link rel="alternate" href="netlify.toml" type="application/toml" title="Netlify Config">
+
+<!-- Link to sitemap -->
+<link rel="sitemap" href="sitemap.xml" type="application/xml" title="Sitemap">
+
+<!-- Link to robots.txt -->
+<link rel="robots" href="public/robots.txt" type="text/plain" title="Robots">
     <style>
         :root {
             --primary: #1a3a6c;
@@ -196,105 +147,119 @@
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #2c5aa0 	100%);
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             position: relative;
             overflow: hidden;
         }
-       
-	.blinking-button {
-            animation: blink 2s infinite;
-            background-color: #ff6b35;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+        
+        .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+        
+        .hero-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
         
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; transform: scale(1.05); }
-            100% { opacity: 1; }
-        }
- .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-       .hero-text {
-    flex: 1;
-    padding-right: 40px;
-}
-
-/* Increase font size for h1 */
-.hero-text h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px; /* Increased size */
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
- /*Increase font size for h2 */
-.hero-text h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 38px; /* Increased size */
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
-        
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        .hero-text p {
+            font-size: 18px;
             margin-bottom: 30px;
+            max-width: 600px;
+        
+        .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .btn-primary {
+        background: var(--accent);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+    
+    .btn-secondary {
+        border: 2px solid white;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .btn-secondary:hover {
+        background: rgba(255,255,255,0.1);
+    }
+    
+    .blinking-button {
+        animation: blink 2s infinite;
+    }
+    
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
+    }
+    
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .feature {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(5px);
+        padding: 25px;
+        border-radius: 8px;
+        max-width: 250px;
+        transition: transform 0.3s;
+    }
+    
+    .feature:hover {
+        transform: translateY(-5px);
+    }
+    
+    .feature i {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: var(--accent);
+    }
+    
+    @media (max-width: 768px) {
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
         }
         
         .feature {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 200px;
+            max-width: 100%;
+            width: 100%;
         }
+    }
+</style>
         
-        .feature i {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-        
-        .feature h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        /* Content Section */
+
+/* Content Section */
         .content-section {
             padding: 60px 0;
         }
@@ -650,69 +615,52 @@ h2 {
         }
         
         /* Services Section */
-           .services-section {
-        padding: 80px 0;
-        background-color: #f9fafc;
-    }
-    
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .service-card {
-        background: white;
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: all 0.3s ease;
-        text-align: center;
-    }
-    
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .service-card i {
-        font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
-    }
-    
-    .service-card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-        color: var(--primary);
-    }
-    
-    .service-card p {
-        color: var(--gray);
-        margin-bottom: 20px;
-    }
-    
-    .service-link {
-        color: var(--accent);
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 10px;
-        transition: all 0.3s;
-    }
-    
-    .service-link:hover {
-        color: var(--secondary);
-        transform: translateX(5px);
-    }
-    
-    @media (max-width: 768px) {
-        .services-grid {
-            grid-template-columns: 1fr;
+        .services-section {
+            padding: 80px 0;
+            background-color: white;
         }
-    }    
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background-color: var(--light-blue);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background-color: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card i {
+            font-size: 36px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
         /* Process Section */
         .process-section-main {
             padding: 80px 0;
@@ -1067,44 +1015,6 @@ h2 {
                 grid-template-columns: 1fr;
             }
         }
-        
-        /* SEO Section */
-        .seo-section {
-            background-color: var(--light);
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid #eaeaea;
-        }
-        
-        .seo-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .seo-content h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .seo-content p {
-            color: var(--gray);
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        
-        .sitemap-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--secondary);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
-        .sitemap-link:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -1114,6 +1024,10 @@ h2 {
             <div class="contact-info">
                 <span><i class="fas fa-phone-alt"></i> +92 303 6111669</span>
                 <span><i class="fas fa-envelope"></i> scholarmedow@gmail.com</span>
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="your-domain.com/index.html">
             </div>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1133,55 +1047,50 @@ h2 {
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="services/thesis-writing.html">Thesis 				Writing</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#process">Process</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#payments">Payments</a></li>
-                    <li><a 
-		href="/privacy-policy.html">Privacy</a></li>
-                    <li><a href="/terms.html">Terms</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="#order" class="cta-button">Order Now</a>
-        </div>
+       <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="sitemap.xml">Sitemap</a>
+</nav>
+
+ </div>
     </header>
     
-   <!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Premium Academic Writing Services</h1>
-            <h2>We deliver well-researched, plagiarism-free, and timely academic content for students and professionals worldwide.</h2>
-            
-            <div class="hero-buttons">
-                <a href="#services" class="btn-primary">Our Services</a>
-                <a href="thesis-proposal-complete-guide.html" class="btn-secondary blinking-button">
-                    <i class="fas fa-book-open"></i> Read Our Research Proposal Guide <span class="arrow">→</span>
-                </a>
-            </div>
-            
-            <div class="features">
-                <div class="feature">
-                    <i class="fas fa-user-graduate"></i>
-                    <h3>PhD Experts</h3>
-                    <p>Subject specialists with advanced degrees</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-file-certificate"></i>
-                    <h3>100% Original</h3>
-                    <p>Plagiarism-free content guarantee</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Dedicated customer assistance</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Premium Academic Writing Services</h2>
+                <p>We deliver well-researched, plagiarism-free, and timely academic content for students and professionals worldwide.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>PhD Experts</h3>
+                        <p>Subject specialists with advanced degrees</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-file-certificate"></i>
+                        <h3>100% Original</h3>
+                        <p>Plagiarism-free content guarantee</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated customer assistance</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
     
     <!-- Main Content Section -->
     <section class="content-section" id="order">
@@ -1362,46 +1271,31 @@ h2 {
     </section>
     
     <!-- Services Section -->
-    
     <section class="services-section" id="services">
-    <div class="container">
-        <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Comprehensive academic solutions tailored to your specific needs</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Thesis Writing</h3>
-                <p>Complete thesis assistance from proposal to final submission</p>
-                <a href="thesis-writing.html" class="service-link">Learn More →</a>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive academic solutions tailored to your specific needs</p>
             </div>
-            
-            <div class="service-card">
-                <i class="fas fa-file-alt"></i>
-                <h3>Research Papers</h3>
-                <p>Peer-reviewed journal articles and conference papers</p>
-                <a href="research-papers.html" class="service-link">Learn More →</a>
-            </div>
-            
-            <div class="service-card">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Research Proposals</h3>
-                <p>Funded Project Proposals with methodology</p>
-                <a href="research-proposals.html" class="service-link">Learn More →</a>
-            </div>
-            
-            <div class="service-card">
-                <i class="fas fa-edit"></i>
-                <h3>Editing Services</h3>
-                <p>Professional proofreading and formatting services</p>
-                <a href="editing-services.html" class="service-link">Learn More →</a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Thesis Writing</h3>
+                    <p>Complete thesis assistance from proposal to final submission</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Research Papers</h3>
+                    <p>Peer-reviewed journal articles and conference papers</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Research Proposals</h3>
+                    <p>Funded Project Proposals with methodology</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-           
+    </section>
     
     <!-- Process Section -->
     <section class="process-section-main" id="process">
@@ -1499,15 +1393,6 @@ h2 {
         </div>
     </section>
     
-    <!-- SEO Section with Sitemap Link -->
-    <section class="seo-section">
-        <div class="seo-content">
-            <h2>ScholarScript - Your Academic Partner</h2>
-            <p>ScholarScript provides premium academic writing services to students and researchers worldwide. Our team of PhD experts specializes in thesis writing, research papers, editing services, and more. With a commitment to quality, confidentiality, and timely delivery, we help you achieve your academic goals.</p>
-            <p>Explore our website to learn more about our services, process, and client testimonials. For quick access to all pages, view our <a href="/sitemap.xml" class="sitemap-link">sitemap</a>.</p>
-        </div>
-    </section>
-    
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -1522,14 +1407,10 @@ h2 {
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="services/thesis-writing.html">Thesis Writing</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#process">Process</a></li>
-                    <li><a href="services/thesis-writing.html">Thesis Writing</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#payments">Payments</a></li>
-                        <li><a href="/sitemap.xml">Sitemap</a></li>
-                        <li><a href="/terms.html">Terms of Service</a></li>
-                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1552,7 +1433,7 @@ h2 {
                 </div>
             </div>
             <div class="copyright">
-                © 2023 ScholarScript. All rights reserved. | <a href="/privacy-policy.html" style="color: rgba(255,255,255,0.6);">Privacy Policy</a> | <a href="/terms.html" style="color: rgba(255,255,255,0.6);">Terms of Service</a>
+                © 2023 ScholarScript. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1592,10 +1473,12 @@ h2 {
                     }
                 });
             });
-            
-            // Sitemap validation check
-            console.log("Sitemap is accessible at: /sitemap.xml");
         });
     </script>
+<div class="file-downloads">
+    <a href="netlify.toml" download>Download Netlify Config</a>
+    <a href="sitemap.xml" target="_blank">View Sitemap</a>
+    <a href="public/robots.txt" target="_blank">View Robots.txt</a>
+</div>
 </body>
 </html>
